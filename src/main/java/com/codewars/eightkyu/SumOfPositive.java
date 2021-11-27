@@ -8,8 +8,10 @@ Example [1,-4,7,12] => 1 + 7 + 12 = 20
 Note: if there is nothing to sum, the sum is default to 0.
  */
 
+import java.util.Arrays;
+
 public class SumOfPositive {
     public static int sum(int[] arr) {
-        return 0;
+        return Arrays.stream(arr).filter(value -> 0 < value).sum();
     }
 }
