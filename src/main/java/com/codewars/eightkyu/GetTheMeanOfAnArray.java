@@ -8,7 +8,12 @@ The array will never be empty.
 */
 
 public class GetTheMeanOfAnArray {
+
     public static int getAverage(int[] marks) {
-        return 0;
+        int sum = 0;
+        for (int mark : marks) {
+            sum += mark;
+        }
+        return sum / marks.length;
     }
 }
