@@ -7,6 +7,8 @@ Return the average of the given array rounded down to its nearest integer.
 The array will never be empty.
 */
 
+import java.util.Arrays;
+
 public class GetTheMeanOfAnArray {
 
     public static int getAverage(int[] marks) {
@@ -15,5 +17,11 @@ public class GetTheMeanOfAnArray {
             sum += mark;
         }
         return sum / marks.length;
+    }
+
+    public static int getAverage2(int[] marks) {
+        return (int) Arrays.stream(marks)
+                .average()
+                .getAsDouble();
     }
 }
