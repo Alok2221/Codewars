@@ -28,15 +28,11 @@ public class SumOfDifferencesInArray {
             return 0;
         } else if (arr.length == 0) {
             return 0;
-        } else if (arr.length == 2) {
-            sum = arr[0] - arr[1];
-            return sum;
-        } else if (arr.length == 3) {
-            sum = (arr[0] - arr[1]) + (arr[1] - arr[2]);
-            return sum;
-        } else if (arr.length == 4) {
-            sum = (arr[0] - arr[1]) + (arr[1] - arr[2]) + (arr[2] - arr[3]);
-        }
+        } else {
+            for (int i = 0; i < arr.length -1; i++) {
+                sum = sum + (arr[i]-arr[i+1]);
+                }
+            }
         return sum;
     }
 }
