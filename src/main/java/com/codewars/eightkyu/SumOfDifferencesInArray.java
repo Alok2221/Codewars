@@ -10,10 +10,33 @@ Your task is to sum the differences between consecutive pairs in the array in de
         If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell).
 */
 
-import java.util.Arrays;
-
 public class SumOfDifferencesInArray {
     public static int sumOfDifferences(int[] arr) {
-        return 0;
+
+        int temp;
+        for (int in = 0; in < arr.length; in++) {
+            for (int out = 0; out < arr.length - 1 - in; out++) {
+                if (arr[out] < arr[out + 1]) {
+                    temp = arr[out];
+                    arr[out] = arr[out + 1];
+                    arr[out + 1] = temp;
+                }
+            }
+        }
+        int sum = 0;
+        if (arr.length == 1) {
+            return 0;
+        } else if (arr.length == 0) {
+            return 0;
+        } else if (arr.length == 2) {
+            sum = arr[0] - arr[1];
+            return sum;
+        } else if (arr.length == 3) {
+            sum = (arr[0] - arr[1]) + (arr[1] - arr[2]);
+            return sum;
+        } else if (arr.length == 4) {
+            sum = (arr[0] - arr[1]) + (arr[1] - arr[2]) + (arr[2] - arr[3]);
+        }
+        return sum;
     }
 }
