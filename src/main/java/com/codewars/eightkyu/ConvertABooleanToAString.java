@@ -5,11 +5,7 @@ package com.codewars.eightkyu;
 
 public class ConvertABooleanToAString {
 
-    public static String convert(boolean b){
-        if(true) {
-            return "true";
-        } else {
-            return "false";
-        }
+    public static String convert(boolean b) {
+        return String.valueOf(b);
     }
 }
