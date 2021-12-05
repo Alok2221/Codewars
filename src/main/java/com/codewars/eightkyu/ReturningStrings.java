@@ -6,7 +6,8 @@ package com.codewars.eightkyu;
 
 public class ReturningStrings {
     public static String greet(String name) {
-
-        return null;
+        String hello = "Hello, ";
+        String today = " how are you doing today?";
+        return hello + name + today;
     }
 }
