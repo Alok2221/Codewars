@@ -8,6 +8,6 @@ package com.codewars.eightkyu;
 
 public class ConvertANumberToAString {
     public static String numberToString(int num) {
-        return null;
+        return String.valueOf(num);
     }
 }
