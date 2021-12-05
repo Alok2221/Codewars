@@ -5,7 +5,6 @@ package com.codewars.eightkyu;
 
 public class RemoveFirstAndLastCharacter {
     public static String remove(String str) {
-        // your code here
-        return null;
+        return str.substring(1, str.length() - 1);
     }
 }
