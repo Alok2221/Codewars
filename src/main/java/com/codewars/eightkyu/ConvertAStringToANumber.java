@@ -12,7 +12,7 @@ package com.codewars.eightkyu;
 
 public class ConvertAStringToANumber {
     public static int stringToNumber(String str) {
-       
-        return 0;
+        int num = Integer.parseInt(str);
+        return num;
     }
 }
