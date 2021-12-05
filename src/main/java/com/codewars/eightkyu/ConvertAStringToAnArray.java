@@ -5,8 +5,7 @@ package com.codewars.eightkyu;
 //        "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 public class ConvertAStringToAnArray {
-
     public static String[] stringToArray(String s) {
-        return null;
+        return s.split(" ");
     }
 }
