@@ -10,7 +10,6 @@ public class SumMixedArray {
      * Assume input will be only of Integer o String type
      */
     public int sum(List<?> mixed) {
-        return -1;
+        return mixed.stream().mapToInt(i -> Integer.parseInt(i.toString())).sum();
+        }
     }
-}
-
