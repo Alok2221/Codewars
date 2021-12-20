@@ -9,7 +9,15 @@ package com.codewars.eightkyu;
 
 public class DoIGetABonus {
     public static String bonusTime(final int salary, final boolean bonus) {
-        // show me the code!
-        return "";
+        boolean raise = true;
+        if(bonus==raise){
+            int i =salary*10;
+            String better = "\u00A3"+i;
+            return better;
+        }
+        else {
+            String less = "\u00A3"+salary;
+            return less;
+        }
     }
 }
