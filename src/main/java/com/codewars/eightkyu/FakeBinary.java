@@ -6,6 +6,20 @@ package com.codewars.eightkyu;
 
 public class FakeBinary {
     public static String fakeBin(String numberString) {
-        return "";
+        StringBuilder sb = new StringBuilder(numberString);
+        for (int i = 0; i < numberString.length(); i++) {
+            char c = numberString.charAt(i);
+            if ((c == '0') || (c == '1') ||
+                    (c == '2') || (c == '3') ||
+                    (c == '4')) {
+                sb.setCharAt(i, '0');
+            }
+            if ((c == '5') || (c == '6') ||
+                    (c == '7') || (c == '8') ||
+                    (c == '9')) {
+                sb.setCharAt(i, '1');
+            }
+        }
+        return sb.toString();
     }
 }
