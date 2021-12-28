@@ -13,6 +13,6 @@ package com.codewars.eightkyu;
 
 public class DNAToRNAConversion {
         public String dnaToRna(String dna) {
-            return dna;  // Do your magic!
+            return dna.replace('T', 'U');
         }
     }
