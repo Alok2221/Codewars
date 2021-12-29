@@ -8,6 +8,10 @@ package com.codewars.eightkyu;
 public class TwiceAsOld {
 
     public static int TwiceAsOld(int dadYears, int sonYears) {
-return 0;
+        if (sonYears == 0) {
+            return dadYears;
+        } else {
+            return Math.abs(dadYears - sonYears * 2);
+        }
     }
 }
