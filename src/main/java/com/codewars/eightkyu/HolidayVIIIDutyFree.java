@@ -10,6 +10,7 @@ package com.codewars.eightkyu;
 
 public class HolidayVIIIDutyFree {
     public static int dutyFree(int normPrice, int discount, int hol) {
-        return 0;
+
+        return hol * 100 / (normPrice * discount);
     }
 }

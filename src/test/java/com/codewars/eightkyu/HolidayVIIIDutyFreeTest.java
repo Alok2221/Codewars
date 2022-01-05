@@ -3,9 +3,11 @@ package com.codewars.eightkyu;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 // TODO: Replace examples and use TDD development by writing your own tests
 
-public class HolidayVIIIDutyFreeTest extends TestCase {
+public class HolidayVIIIDutyFreeTest {
     @Test
     public void fixedTests() {
         assertEquals(166, HolidayVIIIDutyFree.dutyFree(12, 50, 1000));
