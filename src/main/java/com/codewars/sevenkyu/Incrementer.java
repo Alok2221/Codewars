@@ -16,6 +16,8 @@ package com.codewars.sevenkyu;
 
 public class Incrementer {
     public static int[] incrementer(int[] numbers) {
-        return numbers; // replace with your code ..
+        for (int i = 0; i < numbers.length; i++)
+            numbers[i] = (numbers[i] + i + 1) % 10;
+        return numbers;
     }
 }
