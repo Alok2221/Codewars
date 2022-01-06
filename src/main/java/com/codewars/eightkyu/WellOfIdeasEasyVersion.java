@@ -6,6 +6,12 @@ package com.codewars.eightkyu;
 
 public class WellOfIdeasEasyVersion {
     public static String well(String[] x) {
-        return null;
+        int count = 0;
+        for (String str : x) {
+            if (str.equals("good")) count++;
+            if (count > 2) return "I smell a series!";
+        }
+        if (count != 0) return "Publish!";
+        return "Fail!";
     }
 }
