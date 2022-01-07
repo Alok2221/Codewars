@@ -6,6 +6,6 @@ import java.util.Locale;
 
 public class MakeUpperCase {
     public static String MakeUpperCase(String str){
-    return str;
+    return str.toUpperCase();
     }
 }
