@@ -12,6 +12,6 @@ package com.codewars.eightkyu;
 
 public class GrasshopperCheckForFactor {
     public static boolean checkForFactor(int base, int factor) {
-        return false;
+        return (base % factor) == 0;
     }
 }
