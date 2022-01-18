@@ -1,5 +1,6 @@
 package com.codewars.sevenkyu;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -7,17 +8,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-// TODO: Replace examples and use TDD by writing your own tests
-
-class SolutionTest {
+class IncrementerTest {
     @ParameterizedTest(name = "numbers: {0} expected: {1}")
     @MethodSource
     @DisplayName("Basic Tests")
     void basicTests(int[] numbers, int[] expected) {
-        assertArrayEquals(expected, Incrementer.incrementer(numbers));
+        Assertions.assertArrayEquals(expected, Incrementer.incrementer(numbers));
     }
 
     static Stream<Arguments> basicTests() {
