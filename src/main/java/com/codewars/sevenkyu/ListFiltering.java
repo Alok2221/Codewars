@@ -9,8 +9,12 @@ package com.codewars.sevenkyu;
 
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
+
 public class ListFiltering {
-    public static List filterList(final List list) {
-        return list;
+    public static List filterList(final List<?> list) {
+        return list.stream()
+                .filter(o -> o instanceof Number)
+                .collect(toList());
     }
 }
