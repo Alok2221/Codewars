@@ -9,6 +9,15 @@ package com.codewars.sevenkyu;
 
 public class Mumbling {
     public static String accum(String s) {
-        return s;
+
+        StringBuilder stringBuilder = new StringBuilder();
+        int letter = 0;
+        for (char c : s.toCharArray()) {
+            if (letter > 0) stringBuilder.append('-');
+            stringBuilder.append(Character.toUpperCase(c));
+            for (int i = 0; i < letter; i++) stringBuilder.append(Character.toLowerCase(c));
+            letter++;
+        }
+        return stringBuilder.toString();
     }
 }
