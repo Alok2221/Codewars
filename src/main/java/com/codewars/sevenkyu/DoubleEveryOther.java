@@ -8,7 +8,11 @@ package com.codewars.sevenkyu;
 //      [1,4,3,8]
 
 public class DoubleEveryOther {
-    public static int[] doubleEveryOther(int[] a){
+    public static int[] doubleEveryOther(int[] a) {
+
+        for (int i = 1; i < a.length; i += 2) {
+            a[i] *= 2;
+        }
         return a;
     }
 }
