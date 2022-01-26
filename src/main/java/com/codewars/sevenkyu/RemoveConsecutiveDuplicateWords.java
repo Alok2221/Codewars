@@ -5,7 +5,7 @@ package com.codewars.sevenkyu;
 //        --> "alpha beta gamma delta alpha beta gamma delta"
 
 public class RemoveConsecutiveDuplicateWords {
-    public static String removeConsecutiveDuplicates(String s){
-        return s;
+    public static String removeConsecutiveDuplicates(String s) {
+        return s.replaceAll("(\\b\\S+)( \\1\\b)+", "$1");
     }
 }
