@@ -9,7 +9,6 @@ package com.codewars.sevenkyu;
 
 public class DoubleEveryOther {
     public static int[] doubleEveryOther(int[] a) {
-
         for (int i = 1; i < a.length; i += 2) {
             a[i] *= 2;
         }
