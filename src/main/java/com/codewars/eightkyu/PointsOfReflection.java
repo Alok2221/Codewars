@@ -10,8 +10,6 @@ package com.codewars.eightkyu;
 
 public class PointsOfReflection {
     public static int[] reflectPoint(int[] p, int[] q){
-        //Write Code
-
-        return new int[0];
+        return new int[]{2 * q[0] - p[0], 2 * q[1] - p[1]};
     }
 }
