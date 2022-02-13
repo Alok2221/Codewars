@@ -35,8 +35,16 @@ package com.codewars.sevenkyu;
 //      or return `-1` or ERROR or Nothing or None depending on the language.
 
 
+import java.util.Arrays;
+
 public class LookingForABenefactor {
     public static long newAvg(double[] arr, double navg){
-        return 0;
+        double sum = Arrays.stream(arr).sum();
+        double result = navg * (arr.length + 1) - sum;
+        if (result > 0) {
+            return Math.round(Math.ceil(result));
+        } else {
+            throw new IllegalArgumentException();
+        }
     }
 }
