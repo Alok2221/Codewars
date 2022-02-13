@@ -17,6 +17,15 @@ package com.codewars.sevenkyu;
 
 public class GetTheMiddleCharacter {
     public static String getMiddle(String word) {
-        return null;
+        String s = "";
+        int length = word.length();
+        int middle = length / 2;
+
+        if (length % 2 == 0) {
+            s = word.substring(middle - 1, middle + 1);
+        } else {
+            s = word.substring(middle, middle + 1);
+        }
+        return s;
     }
 }
