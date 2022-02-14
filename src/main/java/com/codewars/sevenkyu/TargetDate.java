@@ -15,8 +15,15 @@ package com.codewars.sevenkyu;
 //      Don't forget to take the rate for a day to be p divided by 36000 since banks consider that there are 360 days in a year.
 //      You have: a0 > 0, p% > 0, a >= a0
 
+import java.time.LocalDate;
+
 public class TargetDate {
     public static String dateNbDays(double a0, double a, double p) {
-        return "";
+        LocalDate d = LocalDate.of(2016, 1, 1);
+        while (a0 < a) {
+            a0 += a0 * (p / 36000);
+            d = d.plusDays(1);
+        }
+        return d.toString();
     }
 }
