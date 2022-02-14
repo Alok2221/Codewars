@@ -8,6 +8,6 @@ package com.codewars.eightkyu;
 
 public class GetCharacterFromAsciiValue {
     public static char getChar(int c) {
-        return 0;
+        return ((char) c);
     }
 }
