@@ -14,7 +14,7 @@ package com.codewars.eightkyu;
 //      height, width and length will always be >0
 
 public class HappyBirthday {
-    public static int wrap(int height, int width, int length){
-        return 0;
+    public static int wrap(int height, int width, int length) {
+        return 2 * (width + height + length + Math.min(height, Math.min(width, length))) + 20;
     }
 }
