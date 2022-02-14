@@ -4,8 +4,11 @@ package com.codewars.eightkyu;
 //        Example : n=5 --> [5,4,3,2,1]
 
 public class ReversedSequence {
-    public static int[] reverse(int n){
-        //your code
-        return new int[]{};
+    public static int[] reverse(int n) {
+        int[] reversed = new int[n];
+        for (int i = 0; i < new int[n].length; i++) {
+            reversed[i] = n - i;
+        }
+        return reversed;
     }
 }
