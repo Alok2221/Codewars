@@ -15,6 +15,14 @@ package com.codewars.eightkyu;
 
 public class TotalAmountOfPoints {
     public static int points(String[] games) {
-        return 0;
+        int allPoints = 0;
+        for (String game : games) {
+            if (game.charAt(0) == game.charAt(2)) {
+                allPoints = allPoints + 1;
+            } else if (game.charAt(0) > game.charAt(2)) {
+                allPoints = allPoints + 3;
+            }
+        }
+        return allPoints;
     }
 }
