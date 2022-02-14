@@ -5,10 +5,9 @@ package com.codewars.eightkyu;
 
 public class ReversedSequence {
     public static int[] reverse(int n) {
-        int[] reversed = new int[n];
-        for (int i = 0; i < new int[n].length; i++) {
-            reversed[i] = n - i;
-        }
-        return reversed;
+        int[] reved = new int[n];
+        for (int i = 0; i < n; i++)
+            reved[i] = n - i;
+        return reved;
     }
 }
