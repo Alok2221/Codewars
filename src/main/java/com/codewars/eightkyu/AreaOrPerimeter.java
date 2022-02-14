@@ -7,7 +7,11 @@ package com.codewars.eightkyu;
 //      Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
 
 public class AreaOrPerimeter {
-    public static int areaOrPerimeter (int l, int w) {
-        return 0;
+    public static int areaOrPerimeter(int l, int w) {
+        if (l == w) {
+            return l * w;
+        } else {
+            return 2 * l + 2 * w;
+        }
     }
 }
