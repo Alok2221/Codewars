@@ -9,6 +9,18 @@ package com.codewars.eightkyu;
 
 public class CountOfPositivesSumOfNegatives {
     public static int[] countPositivesSumNegatives(int[] input) {
-        return null; //return an array with count of positives and sum of negatives
+        int[] result = new int[]{0, 0};
+        if (input == null || input.length == 0) {
+            return new int[]{};
+        } else {
+            for (Integer count : input) {
+                if (count > 0) {
+                    result[0]++;
+                } else if (count < 0) {
+                    result[1] = result[1] + count;
+                }
+            }
+            return result;
+        }
     }
 }
