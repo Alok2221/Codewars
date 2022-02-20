@@ -7,8 +7,17 @@ package com.codewars.eightkyu;
 //
 //      Note: Use "" instead of '' in C++.
 
+import java.util.Objects;
+
 public class ThinkfulLogicDrillsTrafficLight {
     public static String updateLight(String current) {
-        return "";
+        if (Objects.equals(current, "red")) {
+            current = "green";
+        } else if (Objects.equals(current, "yellow")) {
+            current = "red";
+        } else if (Objects.equals(current, "green")) {
+            current = "yellow";
+        }
+        return current;
     }
 }
