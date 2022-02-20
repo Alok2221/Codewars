@@ -12,10 +12,17 @@ package com.codewars.eightkyu;
 //      Kata.sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
 //      Kata.sumMul(4, -7)  // throws IllegalArgumentException
 
-
 public class SumOfMultiples {
     public static long sumMul(int n, int m) {
-        // TODO implement
-        return 0;
+        if (n <= 0 || m <= 0) {
+            throw new IllegalArgumentException("n = " + n + " m = " + m);
+        }
+        long sum = 0;
+        for (long i = n; i < m; i++) {
+            if (i % n == 0) {
+                sum += i;
+            }
+        }
+        return sum;
     }
 }
