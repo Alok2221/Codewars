@@ -12,6 +12,16 @@ package com.codewars.sevenkyu;
 
 public class HighestAndLowest {
     public static String highAndLow(String numbers) {
-        return "throw towel";
+
+        String[] splitStr = numbers.split(" ");
+        int lNum = Integer.parseInt(splitStr[0]);
+        int hNum = Integer.parseInt(splitStr[0]);
+        for (int i = 1; i < splitStr.length; i++) {
+            if (lNum > Integer.parseInt(splitStr[i]))
+                lNum = Integer.parseInt(splitStr[i]);
+            if (hNum < Integer.parseInt(splitStr[i]))
+                hNum = Integer.parseInt(splitStr[i]);
+        }
+        return (hNum) + " " + (lNum);
     }
 }
