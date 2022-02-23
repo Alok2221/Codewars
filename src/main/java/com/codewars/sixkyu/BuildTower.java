@@ -26,6 +26,9 @@ package com.codewars.sixkyu;
 public class BuildTower {
     public static String[] TowerBuilder(int nFloors) {
         String[] tower = new String[nFloors];
-        return new String[0];
+        for (int i = 0; i < nFloors; i++) {
+            tower[i] = " ".repeat(nFloors - (i + 1)) + "*".repeat(i * 2 + 1) + " ".repeat(nFloors - (i + 1));
+        }
+        return tower;
     }
 }
