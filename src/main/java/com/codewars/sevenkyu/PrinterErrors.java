@@ -19,6 +19,8 @@ package com.codewars.sevenkyu;
 
 public class PrinterErrors {
     public static String printerError(String s) {
-        return "";
+        return (s.chars()
+                .filter(i -> i >= 'n' && i <= 'z')
+                .count()) + "/" + s.length();
     }
 }
