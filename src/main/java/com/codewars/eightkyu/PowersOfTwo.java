@@ -8,7 +8,9 @@ package com.codewars.eightkyu;
 //      n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
 
 public class PowersOfTwo {
-    public static long[] powersOfTwo(int n){
-        return new long[0];
+    public static long[] powersOfTwo(int n) {
+        long[] power = new long[n + 1];
+        for (int i = 0; i <= n; i++) power[i] = 1L << i;
+        return power;
     }
 }
