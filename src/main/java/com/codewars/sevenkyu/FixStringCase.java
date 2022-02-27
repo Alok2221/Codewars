@@ -11,11 +11,25 @@ package com.codewars.sevenkyu;
 //      solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
 //      More examples in test cases. Good luck!
 
-import java.util.Locale;
 import java.util.Objects;
 
 public class FixStringCase {
     public static String solve(final String str) {
-        return "";
+        int lowCase = 0;
+        int upperCase = 0;
+
+        if (Objects.equals(str, "")) {
+            return "";
+        } else {
+            for (int letter = 0; letter < str.length(); letter++) {
+                if (Character.isUpperCase(str.charAt(letter))) {
+                    upperCase++;
+                } else lowCase++;
+            }
+            if (lowCase >= upperCase) {
+                return str.toLowerCase();
+            } else
+                return str.toUpperCase();
+        }
     }
 }
