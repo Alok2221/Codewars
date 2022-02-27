@@ -17,6 +17,8 @@ package com.codewars.sevenkyu;
 
 public class AllStarCodeChallengeTwentyTwo {
     public static String toTime(int seconds) {
-        return "";
+        int hours = seconds / 3600;
+        int minutes = (seconds % 3600) / 60;
+        return hours + " hour(s) and " + minutes + " minute(s)";
     }
 }
