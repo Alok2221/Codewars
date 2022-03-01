@@ -18,6 +18,14 @@ package com.codewars.eightkyu;
 
 public class AlternatingCase {
     public static String toAlternativeString(String string) {
-        return "";
+        StringBuilder alternative = new StringBuilder();
+        for (char c : string.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                alternative.append(Character.toLowerCase(c));
+            } else {
+                alternative.append(Character.toUpperCase(c));
+            }
+        }
+        return alternative.toString();
     }
 }
