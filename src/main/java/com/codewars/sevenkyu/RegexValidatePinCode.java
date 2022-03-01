@@ -10,6 +10,8 @@ package com.codewars.sevenkyu;
 
 public class RegexValidatePinCode {
     public static boolean validatePin(String pin) {
-        return true;
+        if (pin.length() == 4 || pin.length() == 6) {
+            return pin.matches("[0-9]+");
+        } else return false;
     }
 }
