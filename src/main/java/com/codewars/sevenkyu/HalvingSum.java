@@ -11,6 +11,6 @@ package com.codewars.sevenkyu;
 
 public class HalvingSum {
     int halvingSum(int n) {
-        return 0;
+        return n == 0 ? 0 : n + halvingSum(n / 2);
     }
 }
