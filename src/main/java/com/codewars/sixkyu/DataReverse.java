@@ -15,6 +15,13 @@ package com.codewars.sixkyu;
 
 public class DataReverse {
     public static int[] DataReverser(int[] data) {
-        return new int[]{};
+        int element = data.length / 8;
+        int[] reversed = new int[data.length];
+        for (int i = element - 1, index = 0; i >= 0; i--) {
+            for (int j = 0; j < 8; j++, index++) {
+                reversed[index] = data[i * 8 + j];
+            }
+        }
+        return reversed;
     }
 }
