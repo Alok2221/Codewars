@@ -3,7 +3,7 @@ package com.codewars.sevenkyu;
 //      A new school year is approaching, which also means students will be taking tests.
 //      The tests in this kata are to be graded in different ways. A certain number of points
 //      will be given for each correct answer and a certain number of points will be deducted for each incorrect answer.
-//      For ommitted answers, points will either be awarded, deducted, or no points will be given at all.
+//      For omitted answers, points will either be awarded, deducted, or no points will be given at all.
 //      Return the number of points someone has scored on varying tests of different lengths.
 //      The given parameters will be:
 //      An array containing a series of 0s, 1s, and 2s, where 0 is a correct answer, 1 is an omitted answer
@@ -27,7 +27,22 @@ package com.codewars.sevenkyu;
 //      because: 4*3 + 3*-1 - 3*2 = 3
 
 public class ScoringTests {
-    public static int sol(int[] arr, int r, int o, int w){
-        return 0;
+    public static int sol(int[] arr, int r, int o, int w) {
+        int plusPoints = 0;
+        int minusPoint = 0;
+        int omittedAnswers = 0;
+
+        for (int c : arr) {
+            if (c == 0) {
+                plusPoints++;
+            }
+            if (c == 1) {
+                omittedAnswers++;
+            }
+            if (c == 2) {
+                minusPoint++;
+            }
+        }
+        return (plusPoints * r) - (minusPoint * w) + (omittedAnswers * o);
     }
 }
