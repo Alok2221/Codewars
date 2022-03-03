@@ -13,7 +13,21 @@ package com.codewars.sixkyu;
 
 public class TakeATenMinuteWalk {
     public static boolean isValid(char[] walk) {
-        // Insert brilliant code here
-        return true;
+        if (walk.length != 10) {
+            return false;
+        }
+        int x = 0;
+        int y = 0;
+        for (Character c : walk) {
+            switch (c) {
+                case 'n' -> y++;
+                case 's' -> y--;
+                case 'e' -> x--;
+                case 'w' -> x++;
+                default -> {
+                }
+            }
+        }
+        return x == 0 && y == 0;
     }
 }
