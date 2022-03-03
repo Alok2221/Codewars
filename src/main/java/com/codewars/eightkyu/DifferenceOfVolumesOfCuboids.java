@@ -9,7 +9,8 @@ package com.codewars.eightkyu;
 
 public class DifferenceOfVolumesOfCuboids {
     public static int findDifference(final int[] firstCuboid, final int[] secondCuboid) {
-        //your code here !!
-        return 2021;
+        int firstVolume = firstCuboid[0] * firstCuboid[1] * firstCuboid[2];
+        int secondVolume = secondCuboid[0] * secondCuboid[1] * secondCuboid[2];
+        return Math.abs(firstVolume - secondVolume);
     }
 }
