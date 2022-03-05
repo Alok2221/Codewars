@@ -7,8 +7,14 @@ package com.codewars.sevenkyu;
 //      The birthday is expected to be in the past.
 //      Suggestions on how to improve the kata are welcome!
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class AgeInDays {
     public static String ageInDays(int year, int month, int day) {
-        return null;
+        LocalDate now = LocalDate.now();
+        LocalDate birthDate = LocalDate.of(year, month, day);
+        long days = ChronoUnit.DAYS.between(birthDate, now);
+        return "You are " + days + " days old";
     }
 }
