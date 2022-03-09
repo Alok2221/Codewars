@@ -16,6 +16,18 @@ package com.codewars.sixkyu;
 
 public class DerivativesOfTypeXPowerN {
     public static String differentiate(String function) {
-        return "";
+        int xIndex = function.indexOf("x");
+        if (xIndex == -1 || function.equals("x"))
+            return xIndex == -1 ? "0" : "1";
+        int num = 1;
+        if (xIndex == 1 && function.charAt(0) == '-')
+            num = -1;
+        else if (xIndex >= 1)
+            num = Integer.parseInt(function.substring(0, xIndex));
+        int expIndex = function.indexOf("^");
+        if (expIndex == -1)
+            return num + "";
+        int exp = Integer.parseInt(function.substring(expIndex + 1));
+        return num * exp + "x" + (exp - 1 == 1 ? "" : "^" + (exp - 1));
     }
 }
