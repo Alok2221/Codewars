@@ -7,7 +7,9 @@ package com.codewars.sevenkyu;
 //      Good Luck!
 
 public class FourSeven {
-    public static int fourSeven(int n){
+    public static int fourSeven(int n) {
+        while (n == 4) return 7;
+        while (n == 7) return 4;
         return 0;
     }
 }
