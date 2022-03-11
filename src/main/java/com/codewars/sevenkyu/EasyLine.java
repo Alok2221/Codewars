@@ -17,6 +17,11 @@ import java.math.BigInteger;
 
 public class EasyLine {
     public static BigInteger easyLine(int n) {
-        return new BigInteger("000");
+        BigInteger bigInteger = BigInteger.ONE;
+        for (int i = 0; i < n; i++) {
+            bigInteger = bigInteger.multiply(BigInteger.valueOf(2L * n - i))
+                    .divide(BigInteger.valueOf(i + 1));
+        }
+        return bigInteger;
     }
 }
