@@ -10,8 +10,15 @@ package com.codewars.sixkyu;
 //      For example if the input number is 2, and the input list is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drop the next [1,2] since this would
 //      lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3]. With list [20,37,20,21] and number 1, the result would be [20,37,20,21].
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class DeleteOccurrencesOfAnElementIfItOccursMoreThanNTimes {
     public static int[] deleteNth(int[] elements, int maxOccurrences) {
-        return null;
+        List<Integer> list = new ArrayList<>();
+        for (int n : elements)
+            if (Collections.frequency(list, n) < maxOccurrences) list.add(n);
+        return list.stream().mapToInt(Integer::intValue).toArray();
     }
 }
