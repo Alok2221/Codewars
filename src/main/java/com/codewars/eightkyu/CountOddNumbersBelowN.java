@@ -6,7 +6,7 @@ package com.codewars.eightkyu;
 //      Expect large Inputs!
 
 public class CountOddNumbersBelowN {
-    public static int oddCount(int n){
-        return 0;
+    public static int oddCount(int n) {
+        return n / 2;
     }
 }
