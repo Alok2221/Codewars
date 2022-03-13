@@ -8,7 +8,7 @@ package com.codewars.eightkyu;
 //      Good Luck!
 
 public class DoubleChar {
-    public static String doubleChar(String s){
-        return "";
+    public static String doubleChar(String s) {
+        return s.replaceAll(".", "$0$0");
     }
 }
