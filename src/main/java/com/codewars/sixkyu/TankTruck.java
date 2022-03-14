@@ -15,6 +15,16 @@ package com.codewars.sixkyu;
 
 public class TankTruck {
     public static int tankVol(int h, int d, int vt) {
-        return 0;
+        double radius = (double) d / 2;
+        if (h == radius) {
+            return vt / 2;
+        }
+
+        double deep = vt / (Math.PI * radius * radius);
+        double height = h > radius ? radius - (d - h) : radius - h;
+        double side = Math.sqrt(Math.pow(radius, 2) - Math.pow(height, 2));
+        double theta = Math.toDegrees(Math.acos(height / radius));
+        double remainVol = (360 - 2 * theta) / 360 * vt + side * height * deep;
+        return (int) Math.floor(h > radius ? remainVol : vt - remainVol);
     }
 }
