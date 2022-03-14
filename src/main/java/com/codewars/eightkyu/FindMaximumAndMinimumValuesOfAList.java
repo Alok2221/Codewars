@@ -9,12 +9,16 @@ package com.codewars.eightkyu;
 //      * [42, 54, 65, 87, 0]             -> min = 0, max = 87
 //      * [5]                             -> min = 5, max = 5
 
+import java.util.Arrays;
+
 public class FindMaximumAndMinimumValuesOfAList {
     public int min(int[] list) {
-        return 0;
+        Arrays.sort(list);
+        return list[0];
     }
 
     public int max(int[] list) {
-        return 0;
+        Arrays.sort(list);
+        return list[list.length - 1];
     }
 }
