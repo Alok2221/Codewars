@@ -4,8 +4,11 @@ package com.codewars.eightkyu;
 //      Return the result rounded to two decimals.
 //      Note: use the π value provided in your language (Math::PI, M_PI, math.pi, etc)
 
+import java.math.BigDecimal;
+
 public class AreaOfASquare {
     public static double squareArea(double A) {
-        return 0;
+        return BigDecimal.valueOf(Math.pow((A * 2 / Math.PI), 2)).setScale(2, BigDecimal.ROUND_DOWN)
+                .doubleValue();
     }
 }
