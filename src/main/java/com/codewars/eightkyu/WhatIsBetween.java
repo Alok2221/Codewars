@@ -6,8 +6,10 @@ package com.codewars.eightkyu;
 //      b = 4
 //      --> [1, 2, 3, 4]
 
+import static java.util.stream.IntStream.rangeClosed;
+
 public class WhatIsBetween {
     public static int[] between(int a, int b) {
-        return null;
+        return rangeClosed(a, b).toArray();
     }
 }
