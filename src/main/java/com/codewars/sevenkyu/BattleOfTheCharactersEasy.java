@@ -16,6 +16,16 @@ package com.codewars.sevenkyu;
 
 public class BattleOfTheCharactersEasy {
     public static String battle(final String x, final String y) {
-        return ""; // Let the battle begin!
+        int powerA = 0;
+        int powerB = 0;
+        for (char a : x.toCharArray())
+            powerA += a - 64;
+        for (char b : y.toCharArray())
+            powerB += b - 64;
+        if (powerA == powerB)
+            return "Tie!";
+        if (powerA > powerB)
+            return x;
+        return y;
     }
 }
