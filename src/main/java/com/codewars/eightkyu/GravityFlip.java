@@ -21,8 +21,18 @@ package com.codewars.eightkyu;
 //        * 'R', [3, 2, 1, 2]      ->  [1, 2, 2, 3]
 //        * 'L', [1, 4, 5, 3, 5 ]  ->  [5, 5, 4, 3, 1]
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class GravityFlip {
     public static int[] flip(char dir, int[] arr) {
+        if (dir == 'L') {
+            arr = Arrays.stream(arr)
+                    .boxed()
+                    .sorted(Collections.reverseOrder())
+                    .mapToInt(Integer::intValue)
+                    .toArray();
+        } else Arrays.sort(arr);
         return arr;
     }
 }
