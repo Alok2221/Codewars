@@ -6,8 +6,14 @@ package com.codewars.sevenkyu;
 //      More examples in test cases.
 //      Good luck!
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class SimpleEquationReversal {
     public static String solve(String eq) {
-        return "";
+        List<String> reversed = Arrays.asList(eq.split("(?=\\b)"));
+        Collections.reverse(reversed);
+        return String.join("", reversed);
     }
 }
