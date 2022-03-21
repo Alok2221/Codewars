@@ -37,6 +37,14 @@ package com.codewars.sevenkyu;
 
 public class IsSatorSquare {
     public static Boolean isSatorSquare(char[][] tablet) {
-        return false;
+        var n = tablet.length;
+        for (var i = 0; i < n; i++) {
+            for (var j = 0; j < n; j++) {
+                if (tablet[i][j] != tablet[j][i]) return false;
+                if (tablet[i][j] != tablet[n - j - 1][n - i - 1]) return false;
+                if (tablet[i][j] != tablet[n - i - 1][n - j - 1]) return false;
+            }
+        }
+        return true;
     }
 }
