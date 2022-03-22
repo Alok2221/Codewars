@@ -16,8 +16,24 @@ package com.codewars.sixkyu;
 //      Task
 //      Return the length of the longest possible acceptable name built from the elements of sss. If no acceptable name exists, output 000.
 
+import java.util.Arrays;
+
 public class GiveYourKataAName {
     public static int name(String[] s) {
-        return 0;
+        int[] scores = Arrays.stream(s).mapToInt(c -> c.chars().map(d -> d - 'a' + 1).sum()).toArray();
+        int max = 0;
+        for (int i = 1; i < 1 << s.length; i++) {
+            int score = 0, len = 0;
+            for (int j = 0; 1 << j <= i; j++) {
+                if ((i & 1 << j) != 0) {
+                    score += scores[j];
+                    len += s[j].length();
+                }
+            }
+            if (len > max && score <= 10 * len) {
+                max = len;
+            }
+        }
+        return max;
     }
 }
