@@ -9,6 +9,6 @@ package com.codewars.eightkyu;
 
 public class WillYouMakeIt {
     public static boolean zeroFuel(double distanceToPump, double mpg, double fuelLeft) {
-        return false;
+        return distanceToPump <= mpg * fuelLeft;
     }
 }
