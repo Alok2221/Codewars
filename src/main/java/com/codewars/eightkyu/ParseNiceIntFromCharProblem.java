@@ -6,6 +6,6 @@ package com.codewars.eightkyu;
 
 public class ParseNiceIntFromCharProblem {
     public static int howOld(final String herOld) {
-        return 0;
+        return Character.getNumericValue(herOld.charAt(0));
     }
 }
