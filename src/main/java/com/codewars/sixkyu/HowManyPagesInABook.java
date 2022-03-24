@@ -9,6 +9,13 @@ package com.codewars.sixkyu;
 
 public class HowManyPagesInABook {
     public static int amountOfPages(int summary) {
-        return 0;
+        int nums = 0;
+        int digits = 0;
+
+        while (nums < summary) {
+            digits++;
+            nums += String.valueOf(digits).length();
+        }
+        return digits;
     }
 }
