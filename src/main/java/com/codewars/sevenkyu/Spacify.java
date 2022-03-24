@@ -5,6 +5,6 @@ package com.codewars.sevenkyu;
 
 public class Spacify {
     public static String spacify(String str) {
-        return str;
+        return str.replaceAll(".(?!$)", "$0 ");
     }
 }
