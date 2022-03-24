@@ -4,6 +4,6 @@ package com.codewars.eightkyu;
 
 public class FunctionThreeMultiplyingTwoNumbers {
     public static int multiply(int num1, int num2) {
-        return 0;
+        return num1*num2;
     }
 }
