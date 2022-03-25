@@ -9,8 +9,15 @@ package com.codewars.sevenkyu;
 //      "abcabcd" is NOT a valid word because "a" appears twice, "b" appears twice, "c" appears twice, but "d" only appears once!
 //      "123abc!" is a valid word because all of the characters only appear once in the word.
 
+import java.util.HashSet;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 public class CharacterCounter {
     public static boolean validateWord(String word) {
-        return false;
+        return new HashSet<>(word.toLowerCase().chars().boxed()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .values()
+        ).size() == 1;
     }
 }
