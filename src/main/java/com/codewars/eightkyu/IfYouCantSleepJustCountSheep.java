@@ -7,6 +7,14 @@ package com.codewars.eightkyu;
 
 public class IfYouCantSleepJustCountSheep {
     public static String countingSheep(int num) {
-        return "";
+        String sheepCount = " sheep...";
+        StringBuilder stringBuilder = new StringBuilder();
+        if (num == 0) {
+            return "";
+        }
+        for (int i = 1; i <= num; i++) {
+            stringBuilder.append(i).append(sheepCount);
+        }
+        return stringBuilder.toString();
     }
 }
