@@ -17,8 +17,14 @@ package com.codewars.sixkyu;
 //      [Personal thanks to Professor Jim Fowler on Coursera for his awesome classes that I really recommend to any math enthusiast
 //      and for showing me this mathematical curiosity too with his usual contagious passion :)]
 
+import java.util.Arrays;
+
 public class TribonacciSequence {
     public double[] tribonacci(double[] s, int n) {
-        return new double[]{};
+        double[] tritab = Arrays.copyOf(s, n);
+        for (int i = 3; i < n; i++) {
+            tritab[i] = tritab[i - 1] + tritab[i - 2] + tritab[i - 3];
+        }
+        return tritab;
     }
 }
