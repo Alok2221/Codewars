@@ -9,8 +9,12 @@ package com.codewars.sevenkyu;
 //      should return :
 //      "12222666666999999999"
 
+import java.util.stream.Collectors;
+
 public class DigitsExplosion {
     public static String explode(String digits) {
-        return digits;
+        return digits.chars()
+                .mapToObj(c -> Integer.toString(c - '0').repeat(c - '0'))
+                .collect(Collectors.joining());
     }
 }
