@@ -45,8 +45,18 @@ package com.codewars.sevenkyu;
 //      (17-17)+(15-14)+(8-7)+(7-5)+(4-4) = 4
 //      The right wing is nearly as steep as the right one.
 
+import java.util.Arrays;
+
 public class HowGreenIsMyValley {
     public static int[] makeValley(int[] arr) {
-        return new int[]{};
+        Arrays.sort(arr);
+        int[] ans = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0)
+                ans[i / 2] = arr[arr.length - 1 - i];
+            else
+                ans[arr.length - 1 - i / 2] = arr[arr.length - 1 - i];
+        }
+        return ans;
     }
 }
