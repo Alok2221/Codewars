@@ -6,6 +6,6 @@ package com.codewars.eightkyu;
 
 public class StringRepeat {
     public static String repeatStr(final int repeat, final String string) {
-        return "";
+        return string.repeat(repeat);
     }
 }
