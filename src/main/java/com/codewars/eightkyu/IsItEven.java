@@ -8,6 +8,6 @@ package com.codewars.eightkyu;
 
 public class IsItEven {
     public boolean isEven(double n) {
-        return false;
+        return n % 2 == 0;
     }
 }
