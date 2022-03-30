@@ -4,6 +4,6 @@ package com.codewars.eightkyu;
 
 public class HexToDecimal {
     public static int hexToDec(final String hexString) {
-        return 0;
+        return Integer.valueOf(hexString, 16);
     }
 }
