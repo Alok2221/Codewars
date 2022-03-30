@@ -8,6 +8,6 @@ import java.util.Arrays;
 
 public class EnumerableMagicTakeTheFirstNElements {
     public static int[] take(int[] arr, int n) {
-        return arr;
+        return Arrays.stream(arr).limit(n).toArray();
     }
 }
