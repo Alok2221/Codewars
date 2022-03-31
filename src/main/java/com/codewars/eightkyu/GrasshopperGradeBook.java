@@ -12,6 +12,23 @@ package com.codewars.eightkyu;
 
 public class GrasshopperGradeBook {
     public static char getGrade(int s1, int s2, int s3) {
-        return ' ';
+        int score = (s1 + s2 + s3) / 3;
+        char grade = ' ';
+        if (score >= 90 && score <= 100) {
+            grade = 'A';
+        }
+        if (score >= 80 && score < 90) {
+            grade = 'B';
+        }
+        if (score >= 70 && score < 80) {
+            grade = 'C';
+        }
+        if (score >= 60 && score < 70) {
+            grade = 'D';
+        }
+        if (score >= 0 && score < 60) {
+            grade = 'F';
+        }
+        return grade;
     }
 }
