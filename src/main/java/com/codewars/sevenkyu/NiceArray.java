@@ -16,8 +16,14 @@ package com.codewars.sevenkyu;
 //      Write a function named isNice/IsNice that returns true if its array argument is a Nice array, else false.
 //      An empty array is not considered nice.
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
+
 public class NiceArray {
-    public static boolean isNice(Integer[] arr){
-        return false;
+    public static boolean isNice(Integer[] arr) {
+        List<Integer> list = new ArrayList<>(Arrays.asList(arr));
+        return IntStream.range(0, arr.length).noneMatch(i -> !list.contains(arr[i] + 1) && !list.contains(arr[i] - 1)) && arr.length >= 2;
     }
 }
