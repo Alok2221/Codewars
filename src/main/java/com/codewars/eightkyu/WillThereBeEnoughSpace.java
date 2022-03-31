@@ -15,7 +15,10 @@ package com.codewars.eightkyu;
 //      cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
 
 public class WillThereBeEnoughSpace {
-    public static int enough(int cap, int on, int wait){
-        return 0;
+    public static int enough(int cap, int on, int wait) {
+        if (cap - on >= wait) {
+            return 0;
+        }
+        return Math.abs(cap - (on + wait));
     }
 }
