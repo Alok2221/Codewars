@@ -12,7 +12,7 @@ package com.codewars.eightkyu;
 //      Note that the phrase can also be written as "3.50" or "three fifty".
 
 public class AStrangeTripToTheMarket {
-    public static boolean isLockNessMonster(String s){
-        return false;
+    public static boolean isLockNessMonster(String s) {
+        return s.contains("tree fiddy") || s.contains("3.50") || s.contains("three fifty");
     }
 }
