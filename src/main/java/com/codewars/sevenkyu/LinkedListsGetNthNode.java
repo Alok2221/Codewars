@@ -15,6 +15,7 @@ public class LinkedListsGetNthNode {
     public LinkedListsGetNthNode next = null;
 
     public static int getNth(LinkedListsGetNthNode n, int index) throws Exception {
-        return 0;
+        if (index == 0) return n.data;
+        return getNth(n.next, index - 1);
     }
 }
