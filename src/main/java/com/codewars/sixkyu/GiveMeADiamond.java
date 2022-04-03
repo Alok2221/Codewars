@@ -21,8 +21,18 @@ package com.codewars.sixkyu;
 //      ...that is:
 //      "  *\n ***\n*****\n ***\n  *\n"
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class GiveMeADiamond {
     public static String print(int n) {
-        return "";
+        if (n < 0 || n % 2 == 0) {
+            return null;
+        }
+        return IntStream.range(0, n * 2)
+                .filter(i -> i % 2 > 0)
+                .map(i -> i > n ? n - (i - n) : i)
+                .mapToObj(i -> " ".repeat((n - i) / 2) + "*".repeat(i) + "\n")
+                .collect(Collectors.joining());
     }
 }
