@@ -25,8 +25,45 @@ package com.codewars.sixkyu;
 //      If n is greater than the number of participants then return "Not enough participants".
 //      See Examples Test Cases for more examples.
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class PrizeDraw {
     public static String nthRank(String st, Integer[] we, int n) {
-        return null;
+        if (st.isEmpty()) return "No participants";
+        String[] names = st.split(",");
+        if (n > names.length) return "Not enough participants";
+        ParticipantComparator comparator = new ParticipantComparator(we, st);
+        Arrays.sort(names, comparator);
+        return names[n - 1];
+    }
+
+    private static class ParticipantComparator implements Comparator<String> {
+
+        private final Integer[] weights;
+        private final String[] names;
+
+        private ParticipantComparator(Integer[] weights, String names) {
+            this.weights = weights;
+            this.names = names.split(",");
+        }
+
+        @Override
+        public int compare(String a, String b) {
+            Integer weightA = weight(a);
+            Integer weightB = weight(b);
+            int compare = weightB.compareTo(weightA);
+            if (compare != 0) return compare;
+            return a.compareTo(b);
+        }
+
+        private int weight(String name) {
+            int sum = 0;
+            for (char c : name.toLowerCase().toCharArray()) {
+                sum += ((int) c) - 96;
+            }
+            int weight = this.weights[Arrays.asList(this.names).indexOf(name)];
+            return (name.length() + sum) * weight;
+        }
     }
 }
