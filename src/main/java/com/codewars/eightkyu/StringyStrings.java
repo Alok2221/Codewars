@@ -9,6 +9,9 @@ package com.codewars.eightkyu;
 
 public class StringyStrings {
     public static String stringy(int size) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i < size + 1; i++)
+            sb.append(i & 1);
+        return sb.toString();
     }
 }
