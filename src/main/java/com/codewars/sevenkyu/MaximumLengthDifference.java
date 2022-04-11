@@ -14,6 +14,21 @@ package com.codewars.sevenkyu;
 
 public class MaximumLengthDifference {
     public static int mxdiflg(String[] a1, String[] a2) {
-        return 0;
+        if (a1.length == 0 || a2.length == 0) {
+            return -1;
+        }
+        int maxOne = 0, minOne = Integer.MAX_VALUE, maxTwo = 0,
+                minTwo = Integer.MAX_VALUE;
+        for (String s : a1) {
+            int len = s.length();
+            maxOne = Math.max(maxOne, len);
+            minOne = Math.min(minOne, len);
+        }
+        for (String s : a2) {
+            int len = s.length();
+            maxTwo = Math.max(maxTwo, len);
+            minTwo = Math.min(minTwo, len);
+        }
+        return Math.max(maxOne, maxTwo) - Math.min(minOne, minTwo);
     }
 }
