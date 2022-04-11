@@ -13,4 +13,12 @@ public class MaximumLengthDifferenceTest {
         String[] s2 = new String[]{"cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"};
         assertEquals(13, MaximumLengthDifference.mxdiflg(s1, s2));
     }
+
+    @Test
+    public void emptyTest() {
+        System.out.println("mxdiflg Fixed Tests");
+        String[] s1 = new String[]{};
+        String[] s2 = new String[]{};
+        assertEquals(-1, MaximumLengthDifference.mxdiflg(s1, s2));
+    }
 }
