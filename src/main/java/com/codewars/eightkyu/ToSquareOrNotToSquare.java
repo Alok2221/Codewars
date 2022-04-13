@@ -8,8 +8,12 @@ package com.codewars.eightkyu;
 //      Notes
 //      The input array will always contain only positive numbers, and will never be empty or null.
 
+import java.util.Arrays;
+
 public class ToSquareOrNotToSquare {
-    public static int[] squareOrSquareRoot(int[] array){
-        return array;
+    public static int[] squareOrSquareRoot(int[] array) {
+        return Arrays.stream(array)
+                .map(i -> Math.sqrt(i) % 1 == 0 ? ((int) Math.sqrt(i)) : (i * i))
+                .toArray();
     }
 }
