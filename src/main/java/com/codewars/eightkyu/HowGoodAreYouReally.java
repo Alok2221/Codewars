@@ -9,6 +9,10 @@ package com.codewars.eightkyu;
 
 public class HowGoodAreYouReally {
     public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
-        return false;
+        int avg = yourPoints;
+        for (int i : classPoints) {
+            avg += i;
+        }
+        return avg / (classPoints.length + 1) < yourPoints;
     }
 }
