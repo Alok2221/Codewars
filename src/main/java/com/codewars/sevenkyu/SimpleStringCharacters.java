@@ -7,6 +7,18 @@ package com.codewars.sevenkyu;
 
 public class SimpleStringCharacters {
     public static int[] Solve(String word) {
-        return new int[]{1, 2, 3, 4};
+        int[] count = new int[4];
+        for (int i = 0; i < word.length(); i++) {
+            if (Character.isUpperCase(word.charAt(i))) {
+                count[0]++;
+            } else if (Character.isLowerCase(word.charAt(i))) {
+                count[1]++;
+            } else if (Character.isDigit(word.charAt(i))) {
+                count[2]++;
+            } else {
+                count[3]++;
+            }
+        }
+        return count;
     }
 }
