@@ -6,6 +6,6 @@ package com.codewars.eightkyu;
 
 public class WilsonPrimes {
     public static boolean am_i_wilson(double n) {
-        return false;
+        return n == 5 || n == 13 || n == 563;
     }
 }
