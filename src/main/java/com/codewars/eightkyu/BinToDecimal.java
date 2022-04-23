@@ -4,6 +4,6 @@ package com.codewars.eightkyu;
 
 public class BinToDecimal {
     public static int binToDecimal(String inp) {
-        return 0;
+        return Integer.parseInt(inp,2);
     }
 }
