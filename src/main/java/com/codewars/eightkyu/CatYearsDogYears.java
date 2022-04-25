@@ -17,6 +17,12 @@ package com.codewars.eightkyu;
 
 public class CatYearsDogYears {
     public static int[] humanYearsCatYearsDogYears(final int humanYears) {
-        return new int[]{0, 0, 0};
+        int[] years = new int[]{1, 15, 15};
+        if (humanYears == 2) {
+            years = new int[]{2, 24, 24};
+        } else if (humanYears > 2) {
+            years = new int[]{humanYears, 24 + 4 * (humanYears - 2), 24 + 5 * (humanYears - 2)};
+        }
+        return years;
     }
 }
