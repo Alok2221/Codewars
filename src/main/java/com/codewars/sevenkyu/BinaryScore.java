@@ -14,6 +14,6 @@ import java.math.BigInteger;
 
 public class BinaryScore {
     public static BigInteger score(BigInteger n) {
-        return new BigInteger("0");
+        return BigInteger.valueOf(2).pow(n.bitLength()).subtract(BigInteger.valueOf(1));
     }
 }
