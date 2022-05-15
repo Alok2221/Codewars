@@ -11,6 +11,9 @@ package com.codewars.eightkyu;
 
 public class ReturnNegative {
     public static int makeNegative(final int x) {
-        return 0;
+        if (x > 0) {
+            return -1 * x;
+        }
+        return x;
     }
 }
