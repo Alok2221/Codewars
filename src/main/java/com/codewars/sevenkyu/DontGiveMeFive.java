@@ -15,7 +15,14 @@ package com.codewars.sevenkyu;
 //      I have also created other katas. Take a look if you enjoyed this kata!
 
 public class DontGiveMeFive {
-    public static int dontGiveMeFive(int start, int end){
-        return 0;
+    public static int dontGiveMeFive(int start, int end) {
+        int count = 0;
+        for (int i = start; i <= end; i++)
+            count += containsFive(i) ? 0 : 1;
+        return count;
+    }
+
+    private static boolean containsFive(int i) {
+        return String.valueOf(i).contains("5");
     }
 }
