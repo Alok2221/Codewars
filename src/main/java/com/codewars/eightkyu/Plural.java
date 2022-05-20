@@ -8,6 +8,6 @@ package com.codewars.eightkyu;
 
 public class Plural {
     public static boolean isPlural(float f){
-        return false;
+        return f!=1;
     }
 }
