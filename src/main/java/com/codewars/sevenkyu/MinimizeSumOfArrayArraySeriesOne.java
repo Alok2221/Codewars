@@ -19,8 +19,15 @@ package com.codewars.sevenkyu;
 //      The minimum sum obtained from summing each two integers product , 9*0 + 8*2 +7*4 +6*5 = 74
 
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 public class MinimizeSumOfArrayArraySeriesOne {
     public static int minSum(int[] passed) {
-        return 0;
+        final int[] array = passed.clone();
+        Arrays.sort(array);
+        return IntStream.range(0, array.length / 2)
+                .map(i -> array[i] * array[array.length - i - 1])
+                .sum();
     }
 }
