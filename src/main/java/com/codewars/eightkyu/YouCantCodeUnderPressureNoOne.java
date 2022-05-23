@@ -4,6 +4,6 @@ package com.codewars.eightkyu;
 
 public class YouCantCodeUnderPressureNoOne {
     public static int doubleInteger(int i) {
-        return i;
+        return i * 2;
     }
 }
