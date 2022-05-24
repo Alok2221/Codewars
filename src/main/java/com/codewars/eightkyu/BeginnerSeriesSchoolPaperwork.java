@@ -9,6 +9,9 @@ package com.codewars.eightkyu;
 
 public class BeginnerSeriesSchoolPaperwork {
     public static int paperWork(int n, int m) {
-        return 0;
+        if (n < 0 || m < 0) {
+            return 0;
+        }
+        return n * m;
     }
 }
