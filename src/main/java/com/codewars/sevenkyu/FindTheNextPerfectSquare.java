@@ -11,6 +11,7 @@ package com.codewars.sevenkyu;
 
 public class FindTheNextPerfectSquare {
     public static long findNextSquare(long sq) {
-        return 0;
+        long root = (long) Math.sqrt(sq);
+        return root * root == sq ? (root + 1) * (root + 1) : -1;
     }
 }
