@@ -14,6 +14,12 @@ package com.codewars.eightkyu;
 
 public class HowManyStairsWillSuzukiClimbInTwentyYears {
     public static long stairsIn20(int[][] stairs) {
-        return 0;
+        long allStairs = 0;
+        for (int[] stair : stairs) {
+            for (int i : stair) {
+                allStairs = allStairs + i;
+            }
+        }
+        return allStairs * 20;
     }
 }
