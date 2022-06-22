@@ -9,6 +9,6 @@ package com.codewars.eightkyu;
 
 public class FixMeReplaceAllDots {
     public static String replaceDots(final String str) {
-        return str.replaceAll(".", "-");
+        return str.replaceAll("\\.", "-");
     }
 }
