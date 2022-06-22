@@ -8,6 +8,6 @@ package com.codewars.eightkyu;
 
 public class SimpleValidationOfaUsernameWithRegex {
     public static boolean validateUsr(String s) {
-        return false;
+        return s.matches("[a-z_\\d]{4,16}");
     }
 }
