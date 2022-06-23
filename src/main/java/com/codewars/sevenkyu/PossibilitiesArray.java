@@ -9,6 +9,13 @@ package com.codewars.sevenkyu;
 
 public class PossibilitiesArray {
     public static boolean isAllPossibilities(int[] arg) {
-        return true;
+        int argCount = 0;
+        int arrayCount = 0;
+        for (int i = 0; i < arg.length; i++) {
+            arrayCount++;
+            argCount += arg[1];
+
+        }
+        return arrayCount == argCount;
     }
 }
