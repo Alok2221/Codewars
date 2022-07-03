@@ -20,6 +20,14 @@ package com.codewars.sevenkyu;
 
 public class OddEvenStringSort {
     public static String sortMyString(String s) {
-        return s;
+
+        char[] sArray = s.toCharArray();
+        StringBuilder even = new StringBuilder(), odd = new StringBuilder();
+
+        for (int i = 0; i < sArray.length; i++) {
+            if (i % 2 == 0) even.append(sArray[i]);
+            else odd.append(sArray[i]);
+        }
+        return even + " " + odd;
     }
 }
