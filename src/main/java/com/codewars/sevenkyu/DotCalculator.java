@@ -24,7 +24,14 @@ package com.codewars.sevenkyu;
 //      * ".. - .."                 => ""
 
 public class DotCalculator {
-    public static String calc(String txt){
-        return "";
+    public static String calc(String txt) {
+        int firstDots = txt.indexOf(" ");
+        int secondDots = txt.length() - firstDots - 3;
+        return switch (txt.replace(".", "").trim()) {
+            case "+" -> ".".repeat(firstDots + secondDots);
+            case "-" -> ".".repeat(firstDots - secondDots);
+            case "*" -> ".".repeat(firstDots * secondDots);
+            default -> ".".repeat(firstDots / (secondDots - 1));
+        };
     }
 }
