@@ -30,6 +30,20 @@ package com.codewars.sevenkyu;
 
 public class ScrabbleScore {
     public static int scrabbleScore(String word) {
-        return 0;
+        int score = 0;
+        char[] toCharArray = word.toUpperCase().toCharArray();
+        for (char c : toCharArray) {
+            switch (c) {
+                case 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T' -> score += 1;
+                case 'D', 'G' -> score += 2;
+                case 'B', 'C', 'M', 'P' -> score += 3;
+                case 'F', 'H', 'V', 'W', 'Y' -> score += 4;
+                case 'K' -> score += 5;
+                case 'J', 'X' -> score += 8;
+                case 'Q', 'Z' -> score += 10;
+                default -> score += 0;
+            }
+        }
+        return score;
     }
 }
