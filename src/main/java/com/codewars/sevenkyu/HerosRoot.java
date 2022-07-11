@@ -22,7 +22,12 @@ package com.codewars.sevenkyu;
 //      Don't use the double bitwise NOT ~~ at each iteration if you want to have the same results as in the tests and the other languages.
 
 public class HerosRoot {
-    public static long IntRac(long n, long guess)  {
-        return 0;
+    public static long IntRac(long n, long guess) {
+        int counter = 0;
+        for (long prevGuess = 0; Math.abs(guess - prevGuess) >= 1; counter++) {
+            prevGuess = guess;
+            guess = (guess + n / guess) / 2;
+        }
+        return counter;
     }
 }
