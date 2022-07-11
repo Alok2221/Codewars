@@ -20,6 +20,9 @@ package com.codewars.sevenkyu;
 
 public class GoingToTheCinema {
     public static int movie(int card, int ticket, double perc) {
-        return 0;
+        int count = 0;
+        double totalB = card;
+        while (ticket * count <= Math.ceil(totalB)) totalB += ticket * Math.pow(perc, ++count);
+        return count;
     }
 }
