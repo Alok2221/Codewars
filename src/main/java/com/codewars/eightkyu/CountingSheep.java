@@ -11,8 +11,12 @@ package com.codewars.eightkyu;
 //      The correct answer would be 17.
 //      Hint: Don't forget to check for bad values like null/undefined
 
+import java.util.Arrays;
+
 public class CountingSheep {
     public int countSheeps(Boolean[] arrayOfSheeps) {
-        return 0;
+        return ((int) Arrays.stream(arrayOfSheeps)
+                .filter(s -> s != null && s)
+                .count());
     }
 }
