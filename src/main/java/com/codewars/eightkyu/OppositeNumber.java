@@ -8,6 +8,6 @@ package com.codewars.eightkyu;
 
 public class OppositeNumber {
     public static int opposite(int number) {
-        return 0;
+        return Math.negateExact(number);
     }
 }
