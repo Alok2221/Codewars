@@ -9,6 +9,6 @@ package com.codewars.sixkyu;
 
 public class BreakCamelCase {
     public static String camelCase(String input) {
-        return null;
+        return String.join(" ", input.split("(?=\\p{Upper})"));
     }
 }
