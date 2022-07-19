@@ -13,7 +13,12 @@ package com.codewars.sixkyu;
 //      I have also created other katas. Take a look if you enjoyed this kata!
 
 public class FindTheMissingLetter {
-    public static char findMissingLetter(char[] array){
-        return ' ';
+    public static char findMissingLetter(char[] array) {
+        char expecredLetter = array[0];
+        for (char letter : array) {
+            if (letter != expecredLetter) break;
+            expecredLetter++;
+        }
+        return expecredLetter;
     }
 }
