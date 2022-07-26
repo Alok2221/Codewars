@@ -10,6 +10,16 @@ package com.codewars.sevenkyu;
 
 public class ExesAndOhs {
     public static boolean getXO(String str) {
-        return false;
+        int x = 0, o = 0;
+        String lowStr = str.toLowerCase();
+        for (int i = 0; i < lowStr.length(); i++) {
+            if (lowStr.charAt(i) == 'x') {
+                x++;
+            }
+            if (lowStr.charAt(i) == 'o') {
+                o++;
+            }
+        }
+        return x == o;
     }
 }
