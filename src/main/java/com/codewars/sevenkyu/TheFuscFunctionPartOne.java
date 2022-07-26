@@ -19,6 +19,9 @@ package com.codewars.sevenkyu;
 
 public class TheFuscFunctionPartOne {
     public static int fusc(int n) {
-        return 0;
+        if (n == 0 || n == 1)
+            return n;
+        int t = n % 2;
+        return t == 0 ? fusc(n / 2) : fusc(n / 2) + fusc(n / 2 + 1);
     }
 }
