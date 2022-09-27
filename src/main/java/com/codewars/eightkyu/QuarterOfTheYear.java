@@ -19,4 +19,8 @@ public class QuarterOfTheYear {
         }
         return quarter;
     }
+
+    public static int quarterOf2(int month) {
+        return (int) Math.ceil(month / 3.0);
+    }
 }
