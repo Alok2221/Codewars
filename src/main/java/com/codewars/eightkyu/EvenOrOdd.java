@@ -4,7 +4,7 @@ package com.codewars.eightkyu;
 
 public class EvenOrOdd {
     public static String even_or_odd(int number) {
-        return null;
+        return (number % 2 == 0) ? "Even" : "Odd";
     }
 
 }
