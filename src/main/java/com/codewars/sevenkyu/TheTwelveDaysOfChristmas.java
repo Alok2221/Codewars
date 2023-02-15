@@ -29,8 +29,20 @@ public class TheTwelveDaysOfChristmas {
     public static class HelpSaveChristmas implements Comparator<String> {
         @Override
         public int compare(final String line1, final String line2) {
-            // Your comparison code goes here!
-            return 0;
+            return n(line1) - n(line2);
+        }
+
+        private static int n(String line) {
+            String s = line.substring(0, line.indexOf(' '));
+            int n;
+            if (s.equals("On")) {
+                n = 13;
+            } else if (s.equals("a")) {
+                n = 1;
+            } else {
+                n = Integer.parseInt(s);
+            }
+            return 13 - n;
         }
     }
 }
