@@ -26,6 +26,6 @@ public class AlternatingCase {
                 alternative.append(Character.toUpperCase(c));
             }
         }
-        return alternative.toString();
+        return alternative.toString() ;
     }
 }
