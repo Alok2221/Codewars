@@ -12,35 +12,32 @@ package com.codewars.sixkyu;
 //  output: "hIJKMNPQRSTUVWXZoPQRSTUVWXZlMNPQRSTUVWXZlyZ"
 //  You don't need to validate input, the input string will always contain a certain amount of lowercase letters (min 1 / max 50).
 
-import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class MissingAlphabet {
+
     public static String insertMissingLetters(String input) {
-        Set<Character> originalChars = new HashSet<>();
-        StringBuilder result = new StringBuilder();
+        Set<Character> originalChars = input.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.toSet());
 
-        for (char c : input.toCharArray()) {
-            originalChars.add(c);
-        }
+        Set<Character> processedChars = new java.util.HashSet<>();
 
-        Set<Character> processedChars = new HashSet<>();
-        for (int i = 0; i < input.length(); i++) {
-            char current = input.charAt(i);
-            result.append(current);
-
-            if (!processedChars.contains(current)) {
-                processedChars.add(current);
-                StringBuilder missingLetters = new StringBuilder();
-
-                for (char letter = (char) (current + 1); letter <= 'z'; letter++) {
-                    if (!originalChars.contains(letter)) {
-                        missingLetters.append(Character.toUpperCase(letter));
+        return IntStream.range(0, input.length())
+                .mapToObj(i -> {
+                    char current = input.charAt(i);
+                    if (!processedChars.contains(current)) {
+                        processedChars.add(current);
+                        String missingLetters = IntStream.range(current + 1, 'z' + 1)
+                                .filter(c -> !originalChars.contains((char) c))
+                                .mapToObj(c -> String.valueOf((char) c).toUpperCase())
+                                .collect(Collectors.joining());
+                        return current + missingLetters;
                     }
-                }
-                result.append(missingLetters);
-            }
-        }
-        return result.toString();
+                    return String.valueOf(current);
+                })
+                .collect(Collectors.joining());
     }
 }
