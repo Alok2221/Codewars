@@ -1,4 +1,4 @@
-package com.codewars.fivekyu;
+package com.codewars.sixkyu;
 
 import org.junit.jupiter.api.Test;
 
